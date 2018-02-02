@@ -116,5 +116,6 @@
     <module>Speedith.Gui</module>
     <module>SpiderDrawer</module>
     <module>Speedith.Analyser</module>
+    <module>Speedith.ReMix</module>
   </modules>
 </project>
