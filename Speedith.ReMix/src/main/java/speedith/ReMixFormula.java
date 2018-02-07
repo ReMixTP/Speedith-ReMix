@@ -1,5 +1,7 @@
 package speedith;
 
+import java.util.*;
+
 import speedith.core.lang.DiagramType;
 import speedith.core.lang.Region;
 import speedith.core.lang.SpiderDiagram;
@@ -24,19 +26,26 @@ import org.springframework.boot.autoconfigure.*;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
+
 /**
- * This is the main entry-point to the speedith/ReMix server.
- * Speedith is a theorem prover for spider diagrams. The server
- * Uses a mode somewhere between batch and interactive:
- * each interaction is stateless, but the system does not reset
- * after each interaction. This class actually does very little.
- * See the *Controller.java files for actual request handlers.
+ * A simple formula wrapper for ReMix communication.
  */
-@SpringBootApplication
-public class Main {
+public class ReMixFormula {
+    private String label;
+    private Object data;
+    private String language;
+    private List<String> variables;
+    private List<String> placeholders;
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(Main.class, args);
+    public ReMixFormula(String label,
+                        Object data,
+                        String language,
+                        List<String> variables,
+                        List<String> placeholders) {
+        this.label = label;
+        this.data = data;
+        this.language = language;
+        this.variables = variables;
+        this.placeholders = placeholders;
     }
-
 }
