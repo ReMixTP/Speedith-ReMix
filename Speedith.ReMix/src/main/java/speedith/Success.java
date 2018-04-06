@@ -1,4 +1,4 @@
-package speedith;
+package speedith.remix;
 
 import java.util.*;
 import java.io.*;

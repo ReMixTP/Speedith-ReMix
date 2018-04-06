@@ -33,29 +33,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 
 /**
- * A simple formula wrapper for ReMix communication.
+ * Unwrap the JsonData string into a proper object.
  */
-public class ReMixFormula {
-    private String label;
-    private Object data;
-    private String language;
-    private List<String> variables;
-    private List<String> placeholders;
+public class JsonData {
+    public String goal;
+    public String extraInfo;
 
-    public ReMixFormula(String label,
-                        Object data,
-                        String language,
-                        List<String> variables,
-                        List<String> placeholders) {
-        this.label = label;
-        this.data = data;
-        this.language = language;
-        this.variables = variables;
-        this.placeholders = placeholders;
-    }
-
-    static public ReMixFormula fromJson(String jsonData)
+    public static JsonData fromJson(String jsonData)
     throws java.io.IOException {
-        return new ObjectMapper().readValue(jsonData, ReMixFormula.class);
+        return new ObjectMapper().readValue(jsonData, JsonData.class);
     }
+
+    public void setGoal(String goal) { this.goal = goal; }
+    public void setExtraInfo(String extraInfo) { this.extraInfo = extraInfo; }
+    public String getGoal() { return this.goal; }
+    public String getExtraInfo() { return this.extraInfo; }
 }

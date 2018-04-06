@@ -1,4 +1,4 @@
-package speedith;
+package speedith.remix;
 
 import java.util.*;
 
@@ -80,7 +80,9 @@ class PluginInformation {
  */
 class RouteMap {
     static String reason = "/reasoning";
+    static String translate = "/translation";
 
     // Getter stuff
     public String getReason () { return reason; }
+    public String getTranslate () { return translate; }
 }

@@ -1,4 +1,4 @@
-package speedith;
+package speedith.remix;
 
 import speedith.core.lang.DiagramType;
 import speedith.core.lang.Region;
